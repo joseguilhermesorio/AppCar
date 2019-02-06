@@ -1,3 +1,14 @@
 page-home {
-
+    ion-fab {
+        right: 0;
+        top: -5px;
+    }
+    .fab[mini] {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    ion-icon::before {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
 }
