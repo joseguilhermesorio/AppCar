@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CarrosProvider } from '../providers/carros/carros';
@@ -18,11 +19,13 @@ import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
+import { UsuarioProvider } from '../providers/usuario/usuario';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import 'rxjs/add/observable/of';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
@@ -45,7 +49,8 @@ import 'rxjs/add/observable/of';
     LoadingController,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CarrosProvider,
-    AgendamentosProvider
+    AgendamentosProvider,
+    UsuarioProvider
   ]
 })
 export class AppModule {}
